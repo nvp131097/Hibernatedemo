@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+ <session-factory>
+ 	<property name="connectin.driver_class">com.mysql.jdbc.Driver</property>
+ 	<property name="connection.url">jdbc:mysql://localhost:3306/hibernate</property>
+ 	<property name="connection.username">root</property>
+ 	<property name="connection.password">Nvp@0710</property>
+ 	<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+ 	
+ 	<!-- to create table automatic  -->
+ 	<property name="hbm2ddl.auto">update</property>
+ 	<!-- to show the sql query  -->
+ 	<property name="show_sql">true</property>
+ 	<!-- for access second level cache -->
+ 	<property name="hibernate.cache.use_second_level_cache">true</property>
+  	<property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>
+ 	<!-- by default get() method is pplicable for second level cache but for query wee need to add this property -->
+ 	<property name="hibernate.cache.use_query_cache">true</property>
+ 	
+ 	<mapping class="com.hibernate.Alien"/>
+ 	<mapping class="com.hibernate.Laptop"/>
+ 	<mapping class="com.hibernate.Student"/>
+ 	<mapping class="com.hibernate.Employee"/>
+ 	<mapping class="com.hibernate.Computer"/>
+ 	<mapping class="com.hibernate.Laptop1"/>
+ 	<mapping class="com.hibernate.Student1"/>
+ 	<mapping class="com.hibernate.Teacher"/>
+ 	<mapping class="com.hibernate.Subject"/>
+ 	<mapping class="com.hibernate.Persons"/>
+ 	<mapping class="com.hibernate.Book"/>
+ 	<mapping class="com.hibernate.Worker"/>
+ 	
+  </session-factory>
+</hibernate-configuration>>
+
